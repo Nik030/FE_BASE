@@ -1,0 +1,10 @@
+#thumbnails {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#thumbnails img {
+    width: 200px;
+    margin-right: 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+form #new-item-input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+form #new-item-input:focus, #todo-list li input[type=text]:focus, form #new-item-date:focus {
+    outline: none;
+    border: 1px solid #6c6c6c;
+}
+
+/* 
+внутренный отступ слева и справа на 10px сверху и снизу на 5px
+цвет фона ближе к черному темный цвет
+убрать рамки(border)
+скруглить края на 5px
+и сделать так чтобы курсор стал указателем когда наводим на кнопку
+и цвет текста делать белым
+*/
+
+form #add-item {
+    padding: 5px 10px;
+    border: 1px solid rgb(40, 40, 40);
+    background-color: rgb(130, 130, 130);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+form #new-item-date {
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    border-left: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+form #add-item:hover, #todo-list li button:hover {
+    background-color: rgb(40, 40, 40);
+}
+
+#todo-list {
+    margin-top: 10px;
+    list-style: none;
+    padding: 10px;
+}
+
+#todo-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #ccc;
+    position: relative;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+#todo-list li label {
+    width: 70%;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+#todo-list li input[type=text] {
+    width: 70%;
+    padding: 2px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.hidden {
+    display: none;
+}
+
+#todo-list li:hover {
+    box-shadow: 0 1px 5px black;
+}
+
+#todo-list li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+#todo-list li button {
+    background-color: rgb(130, 130, 130);;
+    cursor: pointer;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 3px 5px;
+}
+
+#todo-list li button:not(:last-child) {
+    margin-right: 5px;
+}
+
+#todo-list li::after {
+    content: attr(data-date);
+    font-size: 10px;
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    top: -10px;
+}

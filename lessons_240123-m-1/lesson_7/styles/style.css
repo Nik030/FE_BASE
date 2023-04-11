@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* padding: 10px; */
+    /* overflow: hidden; */
+    padding-bottom: 50px;
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.inner {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    background-color: brown;
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    font-size: 24px;
+    text-align: center;
+    /* transform: translate(-50%, -50%); */
+}
+
+/* .container .inner:nth-child(1) {
+    z-index: 10;
+} */
+
+/*
+Добавить 4 блока и расположить их по углам экрана родительского блока (верхний левый, верхний правый, нижний левый, нижний правый). на расстоянии 10px и использовать псевдоклассы
+*/
+
+.container .inner:nth-child(1) {
+    top: 10px;
+    left: 10px;
+    z-index: 40;
+}
+
+.container .inner:nth-child(2) {
+    top: 15px;
+    left: 15px;
+    z-index: 30;
+}
+
+.container .inner:nth-child(3) {
+    top: 20px;
+    left: 20px;
+    z-index: 20;
+}
+
+.container .inner:nth-child(4) {
+    top: 25px;
+    left: 25px;
+    z-index: 10;
+}
+
+p {
+    font-size: 24px;
+}
+
+.scroll-top {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(139, 0, 139, 0.3);
+    cursor: pointer;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+}
+
+.modal-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+}
+
+.modal-content {
+    background-color: cadetblue;
+    color: white;
+    width: 80%;
+    height: 70vh;
+    padding: 30px;
+    box-shadow: 10px 10px 40px black;
+    border-radius: 15px;
+    position: relative;
+}
+
+.modal-content .close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 22px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+nav {
+    height: 50px;
+    background-color: rgba(165, 42, 42);
+    color: white;
+    width: 100%;
+    padding: 0 20px;
+    /* position: sticky;
+    top: 0;
+    left: 0; */
+
+    position: fixed;
+    bottom: 0;
+}
+
+ul {
+    display: flex;
+    height: 100%;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul li {
+    cursor: pointer;
+    font-size: 20px;
+}
+

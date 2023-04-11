@@ -1,0 +1,234 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+}
+
+/* .container { */
+    /* width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    background-color: black; */
+    /* transition: "название стили, длительноть, cubic-bezier, задержка"; */
+    /* transition: width 0.5s cubic-bezier(0.46,-1.72, 0.54, 2.81) 0s, 
+                height 0.5s cubic-bezier(0.46,-1.72, 0.54, 2.81) 0.5s; */
+    /* transition: all 1s cubic-bezier(0.46,-1.72, 0.54, 2.81) 0s; */
+/* } */
+
+/* .container:hover {
+    background-color: red;
+    width: 350px;
+    height: 350px;
+} */
+
+/* .box {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    margin-bottom: 20px;
+    transition-duration: 3s;
+}
+
+.ease .box {
+    transition-timing-function: ease;
+}
+
+.linear .box {
+    transition-timing-function: linear;
+}
+
+.ease-in .box {
+    transition-timing-function: ease-in;
+}
+
+.ease-in-out .box {
+    transition-timing-function: ease-in-out;
+}
+
+.ease-out .box {
+    transition-timing-function: ease-out;
+}
+
+.box:hover {
+    transform: scale(2);
+}
+
+.img-block {
+    width: 250px;
+    height: 250px;
+    transition: all 1.5s cubic-bezier(0.27,-0.99, 0.74, 2.02) 0s; */
+    /* transform: rotate(180deg); */
+/* } */
+
+/* .img-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+/* .img-block:hover {
+    box-shadow: 10px 10px 20px black;
+    transform: rotate(360deg);
+} */
+
+/*
+ Используя псевдокласс hover и transform сделайте так, чтобы при наведении на картинку появлялась тень и она делала полный оборот (360 градусов). И добавить анимацию
+*/
+
+/* body {
+    background-color: aqua;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 60px;
+}
+
+form {
+    box-shadow: 5px 5px 20px black;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+form .form-content {
+    background-color: white;
+    border: 1px solid gray;
+    padding: 10px; */
+    /* color: white; */
+    /* border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+} */
+
+/* form .form-content>*:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+form .form-content input {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: grey;
+}
+
+form .form-content input::placeholder {
+    color: white;
+}
+
+form .form-content button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: green;
+    color: white;
+}
+
+form .form-content input:hover {
+    box-shadow: 5px 5px 5px black;
+}
+
+form .form-content input:focus-visible {
+    transform: scale(1.1);
+    outline: none;
+} */
+
+/*
+при наведении курсором добавить тень
+при активации инпут элемента увелечить его размер в 1,1 раза и убрать рамку.
+*/
+
+/*
+при наведении курсором на кнопку поменять цвет текста на зеленый 
+цвет фона на сероватый
+добавть зеленую рамку размером 1px
+ */
+
+/* form .form-content button:hover {
+    color: green;
+    background-color: #e1e1e1;
+    outline: 1px solid green;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: green;
+} */
+
+ul {
+    list-style: none;
+}
+
+li::before {
+    content: '❁';
+    margin-right: 7px;
+}
+
+li::after {
+    content: '❁';
+    margin-left: 7px;
+}
+
+blockquote {
+    background-color: #ffd000;
+    border-left: 2px solid blue;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+blockquote::after, blockquote::before {
+    color: brown;
+    font-size: 40px;
+}
+
+blockquote::after {
+    content: "”";
+}
+
+blockquote::before {
+    content: "“";
+}
+
+.img-block {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.img-block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-block::after {
+    content: attr(data-status);
+    background-color: red;
+    padding: 3px 7px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 5px;
+    transform: translate(50%, -50%);
+    opacity: 0;
+    transition: all 1s ease-in-out 0s;
+}
+
+.img-block:hover:after {
+    opacity: 1;
+}
